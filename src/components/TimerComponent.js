@@ -1,6 +1,16 @@
 import React, { useEffect, useState } from "react";
 
 const TimerComponent = ({ endDate }) => {
+  // const getEndDate = (startDate, duration) => {
+  //   // nft.stakeDate
+  //   const stakeDate = new Date(startDate);
+  //   const stakeDurationInDays = duration; // nft.stakeDurationInDays
+
+  //   const endDate = new Date(stakeDate);
+  //   endDate.setDate(endDate.getDate() + stakeDurationInDays);
+  //   return endDate;
+  // };
+
   const currentDate = new Date();
   // console.log(currentDate);
   // console.log(endDate);

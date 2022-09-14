@@ -12,7 +12,7 @@ import LoadingComponent from "../../components/LoadingComponent";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 
-import TimerComponent from "../../components/TimerComponent";
+import StakeTimerComponent from "../../components/StakeTimerComponent";
 
 const MySwal = withReactContent(Swal);
 
@@ -287,16 +287,6 @@ const Stake = () => {
     }
   };
 
-  const getEndDate = (startDate, duration) => {
-    // nft.stakeDate
-    const stakeDate = new Date(startDate);
-    const stakeDurationInDays = duration; // nft.stakeDurationInDays
-
-    const endDate = new Date(stakeDate);
-    endDate.setDate(endDate.getDate() + stakeDurationInDays);
-    return endDate;
-  };
-
   return (
     <>
       {loading && <LoadingComponent />}
@@ -422,7 +412,7 @@ const Stake = () => {
                     </div>
                     <div className="nft-id">#{nft.toString()}</div>
                     <div className="tw-text-white tw-ml-20">
-                      <TimerComponent endDate={getEndDate("2022-9-10", 30)} />
+                      <StakeTimerComponent startDate={"2022-9-13"} />
                     </div>
 
                     {/* <div className="staked-info">
@@ -457,7 +447,7 @@ const Stake = () => {
                     </div>
                     <div className="nft-id">#{nft.toString()}</div>
                     <div className="tw-text-white tw-ml-20">
-                      <TimerComponent endDate={getEndDate("2022-9-10", 30)} />
+                      <StakeTimerComponent startDate={"2022-9-13"} />
                     </div>
                     {/* <div className="staked-info">
                                             <div className="staked-for">STAKED FOR 30 days</div>
